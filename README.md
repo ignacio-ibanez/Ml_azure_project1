@@ -16,6 +16,10 @@ After running both experiments, the result observed is that both mechanisms retu
 experiment using AutoML.
 
 ## Scikit-learn Pipeline
+The data used for the pipeline is a Bank Marketing dataset used to obtain a classification model.
+The data contains several features, some are numerical, and some are categorical. The last ones are 
+encoded before the training starts.  
+
 The pipeline defined in this experiment consists in a training script built using Scikit-learn. In this script, data is
 read and cleaned first. Afterwards, a Logistic Regression algorithm is applied to part of the data (training set) with the 
 hyperparameters passed to the script through arguments. After the training is completed and the model is evaluated, the 
@@ -39,6 +43,7 @@ a value of 10%) that you consider enough to terminate the run.
 ## AutoML
 In the experiment built with AutoML, 21 runs with different algorithms and hyperparameters were executed, obtaining a
 different model from each of them. The model that obtained the highest accuracy was using VotingEnsemble as algorithm. 
+Some of the hyperparameters found to be the best are: solver=newton-cg, max_iter=100 and l2 penalty.
 
 ## Pipeline comparison
 
